@@ -3,7 +3,7 @@
 		
 		<view class="tops">
 			<text class="tops-title">产品分类</text>
-			<input class="tops-inputs"/>
+			<input class="tops-inputs" :value="inputValue" @input="handleInput"/>
 		</view>
 		
 		<view class="tops">
@@ -36,6 +36,7 @@
 	export default {
 		data() {
 			return {
+				inputValue:'',
 				listItem:[],
 				goodlist:[],
 				selectInfo:'',
@@ -50,9 +51,52 @@
 			
 		},
 		methods:{
+			// 导航栏 按钮点击事件
+			onNavigationBarButtonTap(e){
+				if(this.inputValue){
+					
+					let obj = {'name':this.inputValue}
+				let re = this.goodlist.some(item => item.name == obj.name)
+				// console.log(re)
+					if(re){
+						uni.showToast({
+							icon:'none',
+							title:'新建类别在系统中已存在,请换名称'
+						})
+					}
+					else{
+						this.goodlist.push({'name':this.inputValue})
+						this.inputValue = ''
+					}
+					
+				}
+				else{
+					uni.showToast({
+						icon:'none',
+						title:'新建类别不能为空'
+					})
+				}
+
+			},
+			// 获取输入值
+			handleInput(e){
+				this.inputValue = e.detail.value
+			},
 			// 点击选择的分类
 			handleCategry(item,index){
-				console.log(item,index)
+				if(index+1 == this.listItem.length){
+					return
+				}
+				else{
+					this.listItem = this.listItem.splice(0,index+1)
+					this.goodlist = this.listItem[index].arr
+					if(index == 0){
+						this.selectInfo = ''
+					}
+					else{
+						this.selectInfo = this.listItem[index].title
+					}
+				}
 			},
 			// 点击列表
 			handleItem(item){

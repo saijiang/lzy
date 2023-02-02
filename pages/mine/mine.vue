@@ -2,7 +2,7 @@
 	<view>
 		<!-- 顶部 -->
 		<view class="topviews">
-			<image class="top-logo"></image>
+			<image class="top-logo" src="../../static/images/home/home3.png"></image>
 			<text class="top-title">12345678901</text>
 		</view>
 		<!-- 内容 -->
@@ -24,14 +24,14 @@
 		data() {
 			return {
 				list:[
-					{'icon':'','name':'客户资料'},
-					{'icon':'','name':'供应商资料'},
-					{'icon':'','name':'供应商类别'},
-					{'icon':'','name':'客户类别'},
-					{'icon':'','name':'产品分类'},
-					{'icon':'','name':'刷新'},
-					{'icon':'','name':'退出'},
-					{'icon':'','name':'卸载后台'}
+					{'icon':'../../static/images/home/home3.png','name':'客户资料'},
+					{'icon':'../../static/images/home/home4.png','name':'供应商资料'},
+					{'icon':'../../static/images/home/home5.png','name':'供应商类别'},
+					{'icon':'../../static/images/home/home6.png','name':'客户类别'},
+					{'icon':'../../static/images/home/home7.png','name':'产品分类'},
+					{'icon':'../../static/images/home/home8.png','name':'刷新'},
+					{'icon':'../../static/images/home/home9.png','name':'退出'},
+					{'icon':'../../static/images/home/home10.png','name':'卸载后台'}
 					]
 			};
 		},
@@ -53,6 +53,54 @@
 						url:'/pages/mine/suplycategly/suplycategly'
 					})
 				}
+				else if(name == '客户类别'){
+					uni.navigateTo({
+						url:'/pages/mine/customercategry/customercategry'
+					})
+				}
+				else if(name == '产品分类'){
+					uni.navigateTo({
+						url:'/pages/mine/productcategry/productcategry'
+					})
+				}
+				else if(name == '刷新'){
+					uni.showToast({
+						icon:'none',
+						title:'刷新数据库'
+					})
+				}
+				else if(name == '卸载后台'){
+					uni.showToast({
+						icon:'none',
+						title:'卸载后台'
+					})
+				}
+				else if(name == '退出'){
+					
+					uni.showModal({
+						title: '提示',
+						content: '是否确认退出',
+						success: function (res) {
+							if (res.confirm) {
+								uni.setStorage({
+									key:'login',
+									data:'',
+									success:function(res){
+										uni.reLaunch({
+											url:'/pages/index/index'
+										})
+									}
+								})
+
+								// console.log('用户点击确定');
+							} else if (res.cancel) {
+								// console.log('用户点击取消');
+							}
+						}
+					})
+					
+
+				}
 				
 			}
 		}
@@ -69,9 +117,8 @@
 	flex-direction: row;
 	align-items: center;
 	.top-logo{
-		width: 80px;
+		width: 60px;
 		height: 60px;
-		background-color: yellowgreen;
 		margin-left: 20px;
 		margin-right: 20px;
 	}
@@ -90,7 +137,6 @@
 	.item-logo{
 		width: 30px;
 		height: 30px;
-		background-color: #123edc;
 	}
 	.item-name{
 		flex: 1;

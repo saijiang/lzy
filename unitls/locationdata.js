@@ -1,131 +1,131 @@
 const homelist = [
 	{
 		"title":'销售出库',
-		"icon":'',
+		"icon":'../../static/images/home/saleout.png',
 		"path":'/pages/hsoPage/hsoPage'
 	},
 	{
 		"title":'采购入库',
-		"icon":'',
+		"icon":'../../static/images/home/home2.png',
 		"path":'/pages/purintopage/purintopage'
 	},
 	{
 		"title":'客户',
-		"icon":'',
+		"icon":'../../static/images/home/home3.png',
 		"path":'/pages/home/hcustomer/hcustomer'
 	},
 	{
 		"title":'供应商',
-		"icon":'',
+		"icon":'../../static/images/home/home4.png',
 		"path":'/pages/home/suptomer/suptomer'
 	},
 	{
 		"title":'产品',
-		"icon":''
+		"icon":'../../static/images/home/home5.png'
 	},
 	{
 		"title":'盘点',
-		"icon":''
+		"icon":'../../static/images/home/home6.png'
 	},
 	{
 		"title":'费用',
-		"icon":''
+		"icon":'../../static/images/home/home7.png'
 	},
 	{
 		"title":'销售退货',
-		"icon":''
+		"icon":'../../static/images/home/home8.png'
 	},
 	{
 		"title":'调拨',
-		"icon":''
+		"icon":'../../static/images/home/home9.png'
 	},
 	{
 		"title":'采购退货',
-		"icon":''
+		"icon":'../../static/images/home/home10.png'
 	},
 	{
 		"title":'生成',
-		"icon":''
+		"icon":'../../static/images/home/home11.png'
 	},
 	{
 		"title":'租赁',
-		"icon":''
+		"icon":'../../static/images/home/home12.png'
 	}
 ]
 
 
 const iquarlist = [
 	{
-		"icon":'',
+		"icon":'../../static/images/home/home2.png',
 		"title":'仓库库存报表'
 	},
 	{
-		"icon":'',
+		"icon":'../../static/images/home/home3.png',
 		"title":'产品库存报表'
 	},
 	{
-		"icon":'',
+		"icon":'../../static/images/home/home4.png',
 		"title":'产品销售分析报表'
 	},
 	{
-		"icon":'',
+		"icon":'../../static/images/home/home5.png',
 		"title":'产品采购分析报表'
 	},
 	{
-		"icon":'',
+		"icon":'../../static/images/home/home6.png',
 		"title":'仓库出货分析报表'
 	},
 	{
-		"icon":'',
+		"icon":'../../static/images/home/home7.png',
 		"title":'仓库入库分析报表'
 	},
 	{
-		"icon":'',
+		"icon":'../../static/images/home/home8.png',
 		"title":'业务员业绩分析报表'
 	},
 	{
-		"icon":'',
+		"icon":'../../static/images/home/home9.png',
 		"title":'采购员业务分析报表'
 	},
 	{
-		"icon":'',
+		"icon":'../../static/images/home/home10.png',
 		"title":'客户分析统计报表'
 	},
 	{
-		"icon":'',
+		"icon":'../../static/images/home/home11.png',
 		"title":'供应商分析统计报表'
 	},
 	{
-		"icon":'',
+		"icon":'../../static/images/home/home12.png',
 		"title":'公司收入报表'
 	},
 	{
-		"icon":'',
+		"icon":'../../static/images/home/home2.png',
 		"title":'会员办卡数据报表'
 	},
 	{
-		"icon":'',
+		"icon":'../../static/images/home/home3.png',
 		"title":'PV报表'
 	},
 	{
-		"icon":'',
+		"icon":'../../static/images/home/home4.png',
 		"title":'CURRENCY报表'
 	},
 	{
-		"icon":'',
+		"icon":'../../static/images/home/home5.png',
 		"title":'明细数据查询'
 	},
 	{
-		"icon":'',
+		"icon":'../../static/images/home/home6.png',
 		"title":'客户支出统计报表'
 	},
 	{
-		"icon":'',
+		"icon":'../../static/images/home/home7.png',
 		"title":'其他费用查询'
 	},
 	{
-		"icon":'预警库存',
-		"title":''
+		"icon":'../../static/images/home/home8.png',
+		"title":'预警库存'
 	}
 ]
 

@@ -1,12 +1,25 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/lanch/lanch",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"disableScroll": true,
+				"enablePullDownRefresh": false
+
+			}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "",
 				"navigationStyle": "custom",
 				"enablePullDownRefresh": false,
-				"disableScroll": true
+				"disableScroll": true,
+				"app-plus": {
+					"bounce": "none"
+				}
 			}
 		}
 	    ,{
@@ -16,8 +29,24 @@
                 "navigationBarTitleText": "主页面",
 				"navigationBarBackgroundColor": "#0076ff",
 				"navigationBarTextStyle": "white",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": false,
 				// "disableScroll": true
+				"app-plus": {
+					"popGesture": "none",
+					"subNVues": [
+						{
+							"id": "updatepop",
+							"path": "pages/home/subnvue/updatepop",
+							"type": "popup",
+							"style": {
+								"background":"transparent",
+								"position": "absolute",
+								"mask": "rgba(0,0,0,0)"
+								
+							}
+						}
+					]
+				}
             }
             
         }
@@ -288,7 +317,117 @@
             {
                 "navigationBarTitleText": "添加分类",
                 "enablePullDownRefresh": false,
-				"disableScroll": true
+				"disableScroll": true,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"float": "right",
+								"color": "#ffffff",
+								"fontSize": "25px",
+								"text": "\uebe6", // &#x 转为 \u app中&#xebe6;;
+								"fontSrc": "/static/font/iconfont.ttf"
+							}
+						]
+					},
+					"bounce": "none"
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/customercategry/customercategry",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "客户类别",
+                "enablePullDownRefresh": false,
+				"disableScroll": true,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"float": "right",
+								"color": "#ffffff",
+								"fontSize": "25px",
+								"text": "\ueaf3", // &#x 转为 \u app中 &#xe86f;
+								"fontSrc": "/static/font/iconfont.ttf"
+							}
+						]
+					},
+					"bounce": "none"
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/addcustomer/addcustomer",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "添加分类",
+                "enablePullDownRefresh": false,
+				"disableScroll": true,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"float": "right",
+								"color": "#ffffff",
+								"fontSize": "25px",
+								"text": "\uebe6", // &#x 转为 \u app中&#xebe6;;
+								"fontSrc": "/static/font/iconfont.ttf"
+							}
+						]
+					},
+					"bounce": "none"
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/productcategry/productcategry",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "产品分类",
+                "enablePullDownRefresh": false,
+				"disableScroll": true,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"float": "right",
+								"color": "#ffffff",
+								"fontSize": "25px",
+								"text": "\ueaf3", // &#x 转为 \u app中&#xebe6;;
+								"fontSrc": "/static/font/iconfont.ttf"
+							}
+						]
+					},
+					"bounce": "none"
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/inquire/warehouseinventory/warehouseinventory",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "仓库库存",
+                "enablePullDownRefresh": false,
+				// "disableScroll": true,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"float": "right",
+								"color": "#ffffff",
+								"fontSize": "25px",
+								"text": "\ue653", // &#x 转为 \u app中&#xe653;
+								"fontSrc": "/static/font/iconfont.ttf"
+							}
+						]
+					},
+					"bounce": "none"
+				}
             }
             
         }
@@ -309,26 +448,26 @@
 		"spacing": "5px",
 		"list": [
 			{
-				"iconPath": "",
-				"selectedIconPath": "",
+				"iconPath": "static/images/tabbar/home.png",
+				"selectedIconPath": "static/images/tabbar/homeHL.png",
 				"text": "主页面",
 				"pagePath": "pages/home/home"
 			},
 			{
-				"iconPath": "",
-				"selectedIconPath": "",
+				"iconPath": "static/images/tabbar/org.png",
+				"selectedIconPath": "static/images/tabbar/orgHL.png",
 				"text": "查询",
 				"pagePath": "pages/inquire/inquire"
 			},
 			{
-				"iconPath": "",
-				"selectedIconPath": "",
+				"iconPath": "static/images/tabbar/user.png",
+				"selectedIconPath": "static/images/tabbar/userHL.png",
 				"text": "客服",
 				"pagePath": "pages/customer/customer"
 			},
 			{
-				"iconPath": "",
-				"selectedIconPath": "",
+				"iconPath": "static/images/tabbar/todo.png",
+				"selectedIconPath": "static/images/tabbar/todoHL.png",
 				"text": "管理",
 				"pagePath": "pages/mine/mine"
 			}

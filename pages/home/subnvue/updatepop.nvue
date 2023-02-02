@@ -1,0 +1,45 @@
+<template>
+	<div class="wrapper" @click.stop>
+		<view class="contains">
+			<text @click="upDateAction">升级</text> 
+		</view>
+	</div>
+</template>
+
+<script>
+	export default {
+		data(){
+			return{
+				
+			}
+		},
+		methods:{
+			upDateAction(){
+	           uni.$emit('update')
+			}
+		}
+	}
+</script>
+
+<style>
+.wrapper{
+	background-color: rgba(0, 0, 0, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contains{
+	background-color: aqua;
+	height: 300px;
+	width: 260px;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+
+
+</style>

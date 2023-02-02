@@ -29,9 +29,17 @@
 		},
 		methods: {
 			loginBtn(){
-				uni.switchTab({
-					url:'/pages/home/home'
+				// 登录成功存储本地标识
+				uni.setStorage({
+					key:'login',
+					data:'success',
+					success:function(){
+						uni.switchTab({
+							url:'/pages/home/home'
+						})
+					}
 				})
+				
 			}
 		}
 	}
